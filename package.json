@@ -1,6 +1,6 @@
 {
   "name": "mocha-ms-teams-reporter",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "git@github.com:milankyncl/mocha-ms-teams-reporter.git",
