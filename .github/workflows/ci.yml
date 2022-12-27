@@ -33,7 +33,7 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: install
-      - name: Build bundle
+      - name: Transpile files
         uses: borales/actions-yarn@v4
         with:
           cmd: build
