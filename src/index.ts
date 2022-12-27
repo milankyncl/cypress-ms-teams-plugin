@@ -4,6 +4,7 @@ import { sendFinishedResults } from './msTeamsWebhook';
 export interface Options {
 	msTeamsWebhookUrl: string;
 	ref?: string;
+	runUrl?: string;
 }
 
 export default (on: Cypress.PluginEvents, opts: Options) => {
