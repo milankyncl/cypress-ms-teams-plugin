@@ -1,0 +1,10 @@
+name: Main
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  run-ci:
+    name: Run CI
+    uses: './.github/workflows/ci.yml'
+    secrets: inherit
