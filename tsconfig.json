@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "declaration": true,
+    "strict": true,
+    "importHelpers": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "outDir": "dist/",
+    "rootDir": "src/",
+    "lib": ["dom", "es2017"]
+  }
+}
