@@ -1,0 +1,34 @@
+{
+  "name": "mocha-ms-teams-reporter",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "git@github.com:milankyncl/mocha-ms-teams-reporter.git",
+  "author": "Milan Kyncl <milan.kyncl@icloud.com>",
+  "license": "MIT",
+  "keywords": [
+    "mocha",
+    "reporter",
+    "report",
+    "microsoft",
+    "ms",
+    "teams"
+  ],
+  "dependencies": {
+    "cypress": "^12.2.0",
+    "mocha": "^10.2.0",
+    "ms-teams-webhook": "^1.0.4"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.3.1",
+    "@types/cypress": "^1.1.3",
+    "jest": "^29.3.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^29.0.3",
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "build": "rimraf dist/ && tsc --project tsconfig.build.json",
+    "test": "jest"
+  }
+}

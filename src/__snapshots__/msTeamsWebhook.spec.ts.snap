@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MS Teams webhook #getResultMessagePayload with one test case failed should create failure message payload 1`] = `
+{
+  "@context": "https://schema.org/extensions",
+  "@type": "MessageCard",
+  "potentialAction": undefined,
+  "sections": [
+    {
+      "activitySubtitle": "Test run completed finished in 2s",
+      "activityTitle": "v0.0.1",
+    },
+    {
+      "text": "<strong>Failed test cases:</strong><br />1) Test suite #1 / do this and that (file1.spec.js)",
+    },
+  ],
+  "summary": "Cypress test results",
+  "themeColor": "#FF0000",
+  "title": "1 test case(s) failed",
+}
+`;
+
+exports[`MS Teams webhook #getResultMessagePayload with one test case failed should create success message payload 1`] = `
+{
+  "@context": "https://schema.org/extensions",
+  "@type": "MessageCard",
+  "potentialAction": undefined,
+  "sections": [
+    {
+      "activitySubtitle": "Test run completed finished in 5s",
+      "activityTitle": "v0.0.2",
+    },
+  ],
+  "summary": "Cypress test results",
+  "themeColor": "#009a00",
+  "title": "All test cases passed",
+}
+`;
