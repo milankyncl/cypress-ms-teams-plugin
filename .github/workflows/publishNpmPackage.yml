@@ -13,6 +13,10 @@ jobs:
       - name: Run install
         uses: borales/actions-yarn@v4
         with:
+          cmd: install
+      - name: Transpile files
+        uses: borales/actions-yarn@v4
+        with:
           cmd: build
       - run: npm publish
         env:
