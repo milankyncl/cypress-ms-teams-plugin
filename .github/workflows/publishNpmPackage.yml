@@ -19,7 +19,6 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: build
-      - run: npm login
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: npm publish
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
