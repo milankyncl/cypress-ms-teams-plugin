@@ -3,7 +3,8 @@ on:
   release:
     types: [created]
 jobs:
-  build:
+  release-npm-package:
+    name: Build and release NPM package
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -18,6 +19,7 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: build
-      - run: npm publish
+      - run: npm login
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm publish
