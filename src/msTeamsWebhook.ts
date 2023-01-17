@@ -31,13 +31,13 @@ export function getResultMessagePayload(options: Omit<Options, 'msTeamsWebhookUr
         return [];
     }).flat();
     const failed = result.totalFailed > 0;
-
+    const title = failed ? `${result.totalFailed} test case(s) failed` : 'All test cases have passed';
     return {
         '@type': 'MessageCard',
         '@context': 'https://schema.org/extensions',
-        summary: 'Cypress test results',
+        summary: title,
         themeColor: failed ? '#FF0000' : '#009a00',
-        title: failed ? `${result.totalFailed} test case(s) failed` : 'All test cases passed',
+        title,
         sections: ([
             options.ref ? {
                 activityTitle: options.ref,
