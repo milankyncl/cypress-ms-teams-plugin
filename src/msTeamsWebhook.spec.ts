@@ -21,6 +21,18 @@ describe('MS Teams webhook', () => {
 										title: ['Test suite #1', 'do this and that'],
 										state: 'failed',
 									},
+									{
+										title: ['Test suite #2', 'do that and this also'],
+										state: 'failed',
+									},
+									{
+										title: ['Test suite #3', 'do this only'],
+										state: 'succeeded',
+									},
+									{
+										title: ['Test suite #4', 'do that only'],
+										state: 'failed',
+									},
 								],
 								spec: {
 									name: 'file1.spec.js',

@@ -11,10 +11,10 @@ exports[`MS Teams webhook #getResultMessagePayload with one test case failed sho
       "activityTitle": "v0.0.1",
     },
     {
-      "text": "<strong>Failed test cases:</strong><br />1) Test suite #1 / do this and that (file1.spec.js)",
+      "text": "<strong>Failed test cases:</strong><br />1) Test suite #1 / do this and that (file1.spec.js)<br />2) Test suite #2 / do that and this also (file1.spec.js)<br />3) Test suite #4 / do that only (file1.spec.js)",
     },
   ],
-  "summary": "Cypress test results",
+  "summary": "1 test case(s) failed",
   "themeColor": "#FF0000",
   "title": "1 test case(s) failed",
 }
@@ -31,8 +31,8 @@ exports[`MS Teams webhook #getResultMessagePayload with one test case failed sho
       "activityTitle": "v0.0.2",
     },
   ],
-  "summary": "Cypress test results",
+  "summary": "All test cases have passed",
   "themeColor": "#009a00",
-  "title": "All test cases passed",
+  "title": "All test cases have passed",
 }
 `;
