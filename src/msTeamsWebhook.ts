@@ -23,10 +23,11 @@ interface RunResult {
 }
 
 export function getResultMessagePayload(options: Omit<Options, 'msTeamsWebhookUrl'>, result: RunResult) {
+    let index = 0;
     const failedCases = result.runs.map((run) => {
         if (run.stats.failures > 0) {
-            return run.tests.map((test, i) => test.state === 'failed'
-                ? `${i + 1}) ${test.title.join(' / ')} (${run.spec.name})` : null).filter((test): test is string => test !== null);
+            return run.tests.map((test) => test.state === 'failed'
+                ? `${++index}) ${test.title.join(' / ')} (${run.spec.name})` : null).filter((test): test is string => test !== null);
         }
         return [];
     }).flat();
