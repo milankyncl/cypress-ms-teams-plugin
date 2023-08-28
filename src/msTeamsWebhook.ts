@@ -64,8 +64,12 @@ export async function sendFinishedResults(
     testResults: CypressCommandLine.CypressRunResult,
 ) {
     const webhook = new IncomingWebhook(options.msTeamsWebhookUrl);
-    await webhook.send(JSON.stringify(getResultMessagePayload(
-        options,
-        testResults,
-    )));
+	try {
+		await webhook.send(getResultMessagePayload(
+			options,
+			testResults,
+		));
+	} catch (err) {
+		console.error('Sending the result webhook has failed', err);
+	}
 }
